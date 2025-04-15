@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopStyle - Fashion Marketplace</title>
+    <title>FotoIn</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         function toggleDarkMode() {
@@ -56,10 +56,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-                    </svg>
-                    <span class="text-2xl font-bold text-primary-600">ShopStyle</span>
+                    <img src="{{ asset('storage/icon/image.png') }}" alt="" class="content-center h-10">
+                    <span class="text-2xl font-bold  dark:text-white">FotoIn</span>
                 </div>
                 
                 <div class="flex items-center space-x-4">
