@@ -80,68 +80,43 @@
         <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold text-primary-800 dark:text-white mb-8 animate-bounce-slow">Featured Collection</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                @for($i = 0; $i < 10; $i++)
+                
                 <!-- Product Cards with Enhanced Design -->
-                <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-2xl">
-                    <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722165/AbhirajK/Abhirajk.webp" 
-                        alt="Casual Wear" class="w-full h-64 object-cover">
+                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <!-- Foto Profil Fotografer -->
+                    <a href="{{route('show')}}">
+                    <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="Alex Johnson" class="w-full h-48 object-cover">
+                  
                     <div class="p-6">
-                        <h3 class="text-xl font-semibold text-primary-800 dark:text-white">Casual Wear</h3>
+                      <!-- Nama dan Role -->
+                      <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Alex Johnson</h2>
+                      <p class="text-gray-600 dark:text-gray-400 text-sm">Wedding & Prewedding Specialist</p>
+                  
+                      <!-- Info Paket -->
+                      <div class="mt-4">
+                        <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
                         <div class="flex justify-between items-center mt-2">
-                            <p class="text-primary-600 font-bold">₹99.99</p>
-                            <span class="bg-primary-100 text-primary-800 px-2 py-1 rounded-full text-xs">New</span>
+                          <p class="text-primary-600 font-bold">₹129.99</p>
+                          <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span>
                         </div>
-                        <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
-                            Add to Cart
-                        </button>
+                      </div>
+                  
+                      <!-- Tombol Aksi -->
+                      {{-- <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
+                        Book Now
+                      </button>
+                   --}}
+                      <!-- Sosial Media -->
+                      <div class="flex items-center mt-4 space-x-3 text-sm">
+                        <a href="#" class="text-blue-500 hover:text-blue-600">Facebook</a>
+                        <a href="#" class="text-blue-400 hover:text-blue-500">Twitter</a>
+                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-900">Portfolio</a>
+                      </div>
                     </div>
-                </div>
-
-                <!-- Additional Product Cards with Similar Enhanced Design -->
-                <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-2xl">
-                    <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" 
-                        alt="Summer Collection" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-primary-800 dark:text-white">Summer Collection</h3>
-                        <div class="flex justify-between items-center mt-2">
-                            <p class="text-primary-600 font-bold">₹79.99</p>
-                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Sale</span>
-                        </div>
-                        <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Two More Product Cards -->
-                <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-2xl">
-                    <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk2.webp" 
-                        alt="Winter Special" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-primary-800 dark:text-white">Winter Special</h3>
-                        <div class="flex justify-between items-center mt-2">
-                            <p class="text-primary-600 font-bold">₹129.99</p>
-                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span>
-                        </div>
-                        <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white dark:bg-gray-700 rounded-2xl shadow-lg overflow-hidden transform transition-all hover:-translate-y-2 hover:shadow-2xl">
-                    <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722160/AbhirajK/Abhirajk4.webp" 
-                        alt="Premium Collection" class="w-full h-64 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold text-primary-800 dark:text-white">Premium Collection</h3>
-                        <div class="flex justify-between items-center mt-2">
-                            <p class="text-primary-600 font-bold">₹199.99</p>
-                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Premium</span>
-                        </div>
-                        <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
-                            Add to Cart
-                        </button>
-                    </div>
-                </div>
+                  </div>
+                </a>   
+                @endfor
             </div>
         </div>
     </div>
@@ -166,6 +141,8 @@
             </div>
         </div>
     </div>
+
+    
 
     <!-- Footer with SVG Elements -->
     <footer class="bg-primary-50 dark:bg-gray-800">

@@ -12,6 +12,6 @@ class PhotographersTableSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        
     }
 }
