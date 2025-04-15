@@ -52,12 +52,16 @@
     </svg>
 
     <!-- Navigation -->
+    
     <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-4">
-                    <img src="{{ asset('storage/icon/image.png') }}" alt="" class="content-center h-10">
-                    <span class="text-2xl font-bold  dark:text-white">FotoIn</span>
+                    <a href="{{ route('index') }}" class="flex items-center space-x-2">
+                        <img src="{{ asset('storage/icon/image.png') }}" alt="Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold text-gray-800 dark:text-white leading-tight">FotoIn</span>
+                    </a>
+                    
                 </div>
                 
                 <div class="flex items-center space-x-4">
@@ -80,7 +84,7 @@
         <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold text-primary-800 dark:text-white mb-8 animate-bounce-slow">Featured Collection</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                @for($i = 0; $i < 10; $i++)
+                @for($i = 0; $i < 4; $i++)
                 
                 <!-- Product Cards with Enhanced Design -->
                 <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">

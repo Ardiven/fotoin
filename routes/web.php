@@ -15,8 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('photographers.index');
-});
+})->name('index');
 
 Route::get('/show', function () {
     return view('photographers.show');
 }) ->name('show');
+Route::get('/show/booking', function () {
+    return view('photographers.booking');
+}) ->name('booking');
