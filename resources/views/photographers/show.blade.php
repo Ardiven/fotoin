@@ -168,14 +168,14 @@
             </div>
 
             <!-- Sosial Media -->
-            <div class="mt-10">
+            {{-- <div class="mt-10">
                 <h3 class="text-md font-semibold text-gray-700 dark:text-gray-200">Connect</h3>
                 <div class="flex space-x-4 mt-2">
                     <a href="#" class="text-blue-500 hover:text-blue-600">Facebook</a>
                     <a href="#" class="text-blue-400 hover:text-blue-500">Twitter</a>
                     <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-900">Portfolio</a>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

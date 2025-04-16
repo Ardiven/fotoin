@@ -101,8 +101,8 @@
                       <div class="mt-4">
                         <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
                         <div class="flex justify-between items-center mt-2">
-                          <p class="text-primary-600 font-bold">₹129.99</p>
-                          <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span>
+                          <p class="text-primary-600 font-bold">Start From Rp.1.000.000</p>
+                          {{-- <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span> --}}
                         </div>
                       </div>
                   
@@ -111,15 +111,10 @@
                         Book Now
                       </button>
                    --}}
-                      <!-- Sosial Media -->
-                      <div class="flex items-center mt-4 space-x-3 text-sm">
-                        <a href="#" class="text-blue-500 hover:text-blue-600">Facebook</a>
-                        <a href="#" class="text-blue-400 hover:text-blue-500">Twitter</a>
-                        <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-gray-900">Portfolio</a>
-                      </div>
+                      
                     </div>
+                    </a> 
                   </div>
-                </a>   
                 @endfor
             </div>
         </div>
@@ -134,13 +129,13 @@
                     <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp" 
                         alt="Men's Wear" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
-                    <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Men's Wear</span>
+                    <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Nearby</span>
                 </div>
                 <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
                     <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722160/AbhirajK/Abhirajk4.webp" 
                         alt="Accessories" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
-                    <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Accessories</span>
+                    <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Explore by City</span>
                 </div>
             </div>
         </div>
