@@ -23,3 +23,5 @@ Route::get('/show', function () {
 Route::get('/show/booking', function () {
     return view('photographers.booking');
 }) ->name('booking');
+Route::get('/view', function () {
+    return view('photographers.filtering');})->name('filter');

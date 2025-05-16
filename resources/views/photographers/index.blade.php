@@ -61,7 +61,6 @@
                         <img src="{{ asset('storage/icon/image.png') }}" alt="Logo" class="h-10 w-auto">
                         <span class="text-2xl font-bold text-gray-800 dark:text-white leading-tight">FotoIn</span>
                     </a>
-                    
                 </div>
                 
                 <div class="flex items-center space-x-4">
@@ -125,18 +124,22 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-primary-800 dark:text-white mb-8">Featured Categories</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <a href="{{route('filter')}}">
                 <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
                     <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp" 
                         alt="Men's Wear" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
                     <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Nearby</span>
                 </div>
-                <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722160/AbhirajK/Abhirajk4.webp" 
-                        alt="Accessories" class="w-full h-64 object-cover">
-                    <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
-                    <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Explore by City</span>
-                </div>
+                </a>
+                <a href="{{route('filter')}}">
+                    <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
+                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722160/AbhirajK/Abhirajk4.webp" 
+                            alt="Accessories" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Explore by City</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
