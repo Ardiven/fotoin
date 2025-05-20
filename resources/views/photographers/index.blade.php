@@ -73,7 +73,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
                     </button>
-                    <a href="{{ route('chat') }}" class=" pl-2rounded-lg bg-primary-500 text-white hover:bg-primary-600 transition-colors hover:scale-125">
+                    <a href="{{ route('chat') }}" class=" pl-2rounded-lg bg-primary-500 text-white hover:bg-primary-600 transition-colors hover:scale-125 transition-all duration-300">
                         <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="" class="h-6 w-6">
                     </a>
                 </div>
@@ -84,7 +84,7 @@
     <!-- Hero Section -->
     <div class="relative bg-gradient-to-br from-primary-50 to-white dark:from-gray-800 dark:to-gray-900">
         <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-bold text-primary-800 dark:text-white mb-8 animate-bounce-slow">Featured Collection</h1>
+            <h1 class="text-4xl font-bold text-primary-800 dark:text-white mb-8 animate-bounce-slow">Best Fotografer</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 @for($i = 0; $i < 4; $i++)
                 
