@@ -126,7 +126,7 @@
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <a href="{{route('filter')}}">
                 <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
-                    <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk3.webp" 
+                    <img src="https://i.pinimg.com/736x/fa/3b/f1/fa3bf1463710297d6031b522e0baf7ef.jpg" 
                         alt="Men's Wear" class="w-full h-64 object-cover">
                     <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
                     <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Nearby</span>
@@ -134,10 +134,18 @@
                 </a>
                 <a href="{{route('filter')}}">
                     <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
-                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722160/AbhirajK/Abhirajk4.webp" 
+                        <img src="https://i.pinimg.com/736x/4b/e3/b4/4be3b4cff1484da1d5802de5f44a8714.jpg" 
                             alt="Accessories" class="w-full h-64 object-cover">
                         <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
                         <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Explore by City</span>
+                    </div>
+                </a>
+                <a href="{{route('filter')}}">
+                    <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
+                        <img src="https://i.pinimg.com/736x/21/0e/41/210e41437997d058e952f86b182f7a4f.jpg" 
+                            alt="Accessories" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Explore by Categories</span>
                     </div>
                 </a>
             </div>
