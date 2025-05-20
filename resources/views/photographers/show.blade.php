@@ -17,16 +17,28 @@
                 extend: {
                     colors: {
                         primary: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            200: '#99f6e4',
-                            300: '#5eead4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a'
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
+                        },
+                        secondary: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12'
                         }
                     },
                     animation: {
@@ -53,7 +65,9 @@
                 <div class="flex items-center space-x-4">
                     <a href="{{ route('index') }}" class="flex items-center space-x-2">
                         <img src="{{ asset('storage/icon/image.png') }}" alt="Logo" class="h-10 w-auto">
-                        <span class="text-2xl font-bold text-gray-800 dark:text-white leading-tight">FotoIn</span>
+                        <span class="text-2xl font-bold">
+                            <span class="text-primary-700">Foto</span><span class="text-secondary-500">in</span>
+                        </span>
                     </a>
                     
                 </div>
@@ -86,7 +100,7 @@
   
             <!-- Tentang -->
             <div class="mt-4">
-                <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-200">About</h2>
+                <h2 class="text-lg font-semibold text-primary-700 dark:text-gray-200">About</h2>
                 <p class="text-gray-700 dark:text-gray-300 mt-2">
                     Experienced photographer with 10+ years in wedding and event photography. Passionate about capturing timeless moments.
                 </p>
@@ -94,7 +108,7 @@
   
             <!-- Paket Layanan -->
             <div class="mt-6">
-                <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-4">Photography Packages</h2>
+                <h2 class="text-lg font-semibold text-primary-700 dark:text-gray-200 mb-4">Photography Packages</h2>
   
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Paket 1 -->
@@ -104,7 +118,7 @@
                              class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-gray-800 dark:text-white">Winter Special Package</h3>
-                            <p class="text-primary-600 font-semibold mt-1">₹129.99</p>
+                            <p class="text-secondary-500 font-semibold mt-1">₹129.99</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 3-hour photo session, 50 edited photos, includes travel within city.
                             </p>
@@ -122,7 +136,7 @@
                              class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-gray-800 dark:text-white">Summer Special Package</h3>
-                            <p class="text-primary-600 font-semibold mt-1">₹159.99</p>
+                            <p class="text-secondary-500 font-semibold mt-1">₹159.99</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 5-hour photo session, 100 edited photos, includes travel within city and one album.
                             </p>
@@ -140,7 +154,7 @@
                              class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-gray-800 dark:text-white">Premium Package</h3>
-                            <p class="text-primary-600 font-semibold mt-1">₹249.99</p>
+                            <p class="text-secondary-500 font-semibold mt-1">₹249.99</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 Full-day photo session, 200 edited photos, travel anywhere, two albums, and video coverage.
                             </p>
@@ -151,18 +165,18 @@
 
                         </div>
                     </div>
-                    <!-- Tambah Paket lain jika perlu -->
+                    <!-- Custom Package with Modal -->
                     <div x-data="{ open: false }" class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
                         <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk2.webp"
                             alt="Custom Package"
                             class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-gray-800 dark:text-white">Custom Package</h3>
-                            <p class="text-primary-600 font-semibold mt-1">Custom Price</p>
+                            <p class="text-secondary-500 font-semibold mt-1">Custom Price</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 You can customize your package based on your needs.
                             </p>
-                            <button @click="open = true" class="mt-4 w-full block text-center bg-primary-500 text-white py-2 rounded hover:bg-primary-600 transition">Edit Product</button>
+                            <button @click="open = true" class="mt-4 w-full block text-center bg-primary-500 text-white py-2 rounded hover:bg-primary-600 transition">Edit Package</button>
 
                             <!-- Modal -->
                             <div x-show="open" x-transition class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
@@ -170,7 +184,7 @@
 
                                     <!-- Header -->
                                     <div class="flex items-start justify-between p-5 border-b rounded-t dark:border-gray-700">
-                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Edit Product</h3>
+                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">Edit Package</h3>
                                         <button @click="open = false" type="button" class="text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center">
                                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                                                 <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -222,7 +236,7 @@
 
             <!-- Portfolio -->
             <div class="mt-10">
-                <h2 class="text-lg font-semibold text-gray-700 dark:text-gray-200 mb-4">Portfolio</h2>
+                <h2 class="text-lg font-semibold text-primary-700 dark:text-gray-200 mb-4">Portfolio</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     <img src="{{asset('storage/portofolio/1.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 1">
                     <img src="{{asset('storage/portofolio/2.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 2">
@@ -250,22 +264,22 @@
     <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-                <h3 class="text-lg font-semibold text-primary-800 dark:text-white mb-4">About Us</h3>
-                <p class="text-primary-700 dark:text-gray-300">Your premier destination for fashion and style.</p>
+                <h3 class="text-lg font-semibold text-primary-700 dark:text-white mb-4">About Us</h3>
+                <p class="text-primary-600 dark:text-gray-300">Your premier destination for professional photography.</p>
             </div>
             <div>
-                <h3 class="text-lg font-semibold text-primary-800 dark:text-white mb-4">Quick Links</h3>
-                <ul class="space-y-2 text-primary-700 dark:text-gray-300">
-                    <li class="hover:text-primary-500 transition-colors">Home</li>
-                    <li class="hover:text-primary-500 transition-colors">Shop</li>
-                    <li class="hover:text-primary-500 transition-colors">Categories</li>
-                    <li class="hover:text-primary-500 transition-colors">Contact</li>
+                <h3 class="text-lg font-semibold text-primary-700 dark:text-white mb-4">Quick Links</h3>
+                <ul class="space-y-2 text-primary-600 dark:text-gray-300">
+                    <li class="hover:text-secondary-500 transition-colors">Home</li>
+                    <li class="hover:text-secondary-500 transition-colors">Photographers</li>
+                    <li class="hover:text-secondary-500 transition-colors">Categories</li>
+                    <li class="hover:text-secondary-500 transition-colors">Contact</li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-lg font-semibold text-primary-800 dark:text-white mb-4">Contact Us</h3>
-                <p class="text-primary-700 dark:text-gray-300">Email: info@shopstyle.com</p>
-                <p class="text-primary-700 dark:text-gray-300">Phone: (555) 123-4567</p>
+                <h3 class="text-lg font-semibold text-primary-700 dark:text-white mb-4">Contact Us</h3>
+                <p class="text-primary-600 dark:text-gray-300">Email: info@fotoin.com</p>
+                <p class="text-primary-600 dark:text-gray-300">Phone: (555) 123-4567</p>
             </div>
         </div>
     </div>

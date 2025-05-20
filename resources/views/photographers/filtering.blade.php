@@ -17,16 +17,16 @@
                 extend: {
                     colors: {
                         primary: {
-                            50: '#f0fdfa',
-                            100: '#ccfbf1',
-                            200: '#99f6e4',
-                            300: '#5eead4',
-                            400: '#2dd4bf',
-                            500: '#14b8a6',
-                            600: '#0d9488',
-                            700: '#0f766e',
-                            800: '#115e59',
-                            900: '#134e4a'
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
                         }
                     },
                     animation: {
@@ -46,14 +46,14 @@
         }
     </style>
 </head>
-<body class="bg-gray-200">
+<body class="bg-gray-100">
     <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-4">
                     <a href="{{ route('index') }}" class="flex items-center space-x-2">
                         <img src="{{ asset('storage/icon/image.png') }}" alt="Logo" class="h-10 w-auto">
-                        <span class="text-2xl font-bold text-gray-800 dark:text-white leading-tight">FotoIn</span>
+                        <span class="text-2xl font-bold text-gray-800 dark:text-white leading-tight">Foto<span class="text-primary-500">in</span></span>
                     </a>
                     
                 </div>
@@ -162,7 +162,7 @@
                         <!-- Custom dropdown button -->
                         <button type="button"
                                 @click="open = !open; $nextTick(() => { if(open) $refs.searchInput.focus() })"
-                                class="inline-flex justify-between w-full bg-white rounded md:w-48 px-2 py-2 text-base text-stone-500 bg-gray-50 border border-stone-300 appearance-none focus:outline-none ring-0 focus:ring-2 focus:ring-rose-200 focus:border-rose-500 peer">
+                                class="inline-flex justify-between w-full bg-white rounded md:w-48 px-2 py-2 text-base text-stone-500 bg-gray-50 border border-stone-300 appearance-none focus:outline-none ring-0 focus:ring-2 focus:ring-primary-200 focus:border-primary-500 peer">
                             <span x-text="selectedLabel" class="truncate mx-2"></span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                                 <path fill-rule="evenodd" d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
@@ -172,7 +172,7 @@
                         <!-- Dropdown menu -->
                         <div x-show="open"
                              @click.away="open = false"
-                             class="absolute z-10 w-full mt-2 rounded bg-white ring-2 ring-rose-200 border border-rose-500"
+                             class="absolute z-10 w-full mt-2 rounded bg-white ring-2 ring-primary-200 border border-primary-500"
                              style="display: none;">
                             <!-- Search input with clear button -->
                             <div class="relative">
@@ -188,22 +188,22 @@
                                         @click="search = ''"
                                         class="absolute inset-y-0 right-2 px-2 flex items-center"
                                         x-show="search.length > 0">
-                                    <svg class="h-4 w-4 text-gray-400 hover:text-rose-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <svg class="h-4 w-4 text-gray-400 hover:text-primary-600" fill="currentColor" viewBox="0 0 20 20">
                                         <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                                     </svg>
                                 </button>
                             </div>
 
                             <!-- Dropdown items -->
-                            <div class="rounded-b max-h-60 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-rose-100 [&::-webkit-scrollbar-thumb]:bg-rose-300">
+                            <div class="rounded-b max-h-60 overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-primary-100 [&::-webkit-scrollbar-thumb]:bg-primary-300">
                                 <template x-for="item in filteredItems" :key="item.value">
                                     <div @click="selected.includes(item.value) ? selected = selected.filter(i => i !== item.value) : selected.push(item.value)"
-                                         class="block px-4 py-2 text-gray-700 hover:bg-rose-200 hover:text-rose-500 cursor-pointer bg-white w-full"
-                                         :class="{ 'bg-rose-200': selected.includes(item.value) }">
+                                         class="block px-4 py-2 text-gray-700 hover:bg-primary-200 hover:text-primary-500 cursor-pointer bg-white w-full"
+                                         :class="{ 'bg-primary-200': selected.includes(item.value) }">
                                         <div class="flex items-center gap-2">
                                             <input type="checkbox"
                                                    :checked="selected.includes(item.value)"
-                                                   class="w-4 h-4 border-gray-300 rounded focus:ring-blue-500 flex-shrink-0"
+                                                   class="w-4 h-4 border-gray-300 rounded focus:ring-primary-500 flex-shrink-0"
                                                    @click.stop>
                                             <span x-text="item.label" class="truncate"></span>
                                         </div>
@@ -216,7 +216,7 @@
 
                 <!-- Apply button -->
                 <button type="submit"
-                        class="w-full md:w-auto inline-flex justify-center font-medium appearance-none border border-rose-700 bg-rose-700 rounded px-8 py-2 text-base text-white hover:bg-rose-800 ring-0 peer">
+                        class="w-full md:w-auto inline-flex justify-center font-medium appearance-none border border-primary-700 bg-primary-700 rounded px-8 py-2 text-base text-white hover:bg-primary-800 ring-0 peer">
                     Apply Filters
                 </button>
             </div>
@@ -227,11 +227,11 @@
                     <template x-for="dropdown in dropdowns" :key="dropdown.name">
                         <template x-if="$refs[dropdown.name] !== undefined">
                             <template x-for="item in getSelectedItems(dropdown)" :key="item.value">
-                                <span cl    ass="inline-flex items-center px-3 py-1 rounded-full text-base bg-rose-100 text-rose-800">
+                                <span class="inline-flex items-center px-3 py-1 rounded-full text-base bg-primary-100 text-primary-800">
                                     <span x-text="item.label"></span>
                                     <button type="button"
                                             @click="$refs[dropdown.name].selected = $refs[dropdown.name].selected.filter(i => i !== item.value); $refs[dropdown.name].$el.dispatchEvent(new Event('input'))"
-                                            class="ml-2 inline-flex items-center p-0.5 hover:bg-blue-200 rounded-full">
+                                            class="ml-2 inline-flex items-center p-0.5 hover:bg-primary-200 rounded-full">
                                         <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
                                         </svg>
