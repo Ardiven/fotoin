@@ -25,6 +25,9 @@ Route::get('/show/booking', function () {
 }) ->name('booking');
 Route::get('/view', function () {
     return view('photographers.filtering');})->name('filter');
-    Route::get('/contact', function () {
-        return view('photographers.chat');
-    })->name('chat');
+Route::get('/contact', function () {
+    return view('photographers.chat');
+})->name('chat');
+Route::get('/chatbot', function () {
+    return view('photographers.chatbot');
+})->name('chatbot');

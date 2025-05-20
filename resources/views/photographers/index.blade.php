@@ -165,6 +165,14 @@
                         <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Explore by Categories</span>
                     </div>
                 </a>
+                 <a href="{{route('chatbot')}}">
+                    <div class="relative category-overlay overflow-hidden rounded-2xl shadow-lg">
+                        <img src="https://i.pinimg.com/736x/76/f4/63/76f463f2a6f8f2d6a0a2fe6c0c823f60.jpg" 
+                            alt="Accessories" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-primary-500 bg-opacity-40 hover:bg-opacity-50 transition-all duration-300 rounded-2xl"></div>
+                        <span class="absolute bottom-4 left-4 text-white font-semibold text-xl drop-shadow-lg">Ask AI</span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

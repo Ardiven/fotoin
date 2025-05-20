@@ -97,41 +97,30 @@
 </head>
 <body class="flex flex-col h-screen bg-gray-50" x-data="{ packageModalOpen: false }">
     <!-- Navbar -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50 border-b border-gray-200">
+    <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-lg sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-4">
                     <a href="{{ route('index') }}" class="flex items-center space-x-2">
-                        <div class="text-2xl font-bold text-primary-700 leading-tight">Foto<span class="text-secondary-500">in</span></div>
-                        <span class="bg-secondary-500 text-white text-xs px-2 py-0.5 rounded-md">Beta</span>
+                        <img src="{{ asset('storage/icon/image.png') }}" alt="Logo" class="h-10 w-auto">
+                        <span class="text-2xl font-bold">
+                            <span class="text-primary-700">Foto</span><span class="text-secondary-500">in</span>
+                        </span>
                     </a>
                 </div>
                 
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#" class="text-gray-700 hover:text-primary-600 transition">Fitur</a>
-                    <a href="#" class="text-gray-700 hover:text-primary-600 transition">Cara Kerja</a>
-                    <a href="#" class="text-gray-700 hover:text-primary-600 transition">Testimoni</a>
-                    <a href="#" class="text-gray-700 hover:text-primary-600 transition">Promo</a>
-                </div>
-                
-                <div class="flex items-center space-x-3">
-                    <div class="relative">
-                        <input type="text" placeholder="Search products..." 
-                            class="pl-9 pr-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-primary-400 focus:border-primary-400 transition-all text-sm">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 absolute left-3 top-2.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                        </svg>
-                    </div>
+                <div class="flex items-center space-x-2">
+                    <input type="text" placeholder="Search products..." 
+                        class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-primary-400 transition-all">
                     
                     <button onclick="toggleDarkMode()" 
-                        class="p-2 rounded-lg text-primary-700 hover:bg-primary-50 transition-colors group">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 group-hover:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        class="p-2 rounded-lg bg-primary-500 text-white hover:bg-primary-600 transition-colors group">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 group-hover:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
                     </button>
-                    
-                    <a href="#" class="flex items-center space-x-1 hover:text-primary-600 transition-colors">
-                        <span class="bg-primary-600 text-white py-1.5 px-3 font-medium rounded-lg hover:bg-primary-700 transition-colors">Booking</span>
+                    <a href="{{ route('chat') }}" class="pl-2 rounded-lg text-white hover:scale-125 transition-all duration-300">
+                        <svg class ="h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200"> <path d="M60 10 C85 10, 105 30, 105 55 C105 80, 85 100, 60 100 C55 100, 50 99, 45 97 L20 110 L30 85 C15 75, 15 60, 15 55 C15 30, 35 10, 60 10Z"fill="white"stroke="black"stroke-width="5"/><circle cx="45" cy="55" r="4" fill="black" /><circle cx="60" cy="55" r="4" fill="black" /><circle cx="75" cy="55" r="4" fill="black"/></svg>
                     </a>
                 </div>
             </div>
