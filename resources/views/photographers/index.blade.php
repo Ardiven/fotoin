@@ -54,7 +54,7 @@
     <!-- Navigation -->
     
     <nav class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4">
             <div class="flex justify-between h-16 items-center">
                 <div class="flex items-center space-x-4">
                     <a href="{{ route('index') }}" class="flex items-center space-x-2">
@@ -63,7 +63,7 @@
                     </a>
                 </div>
                 
-                <div class="flex items-center space-x-4">
+                <div class="flex items-center space-x-2">
                     <input type="text" placeholder="Search products..." 
                         class="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white focus:ring-2 focus:ring-primary-400 transition-all">
                     
@@ -73,6 +73,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
                         </svg>
                     </button>
+                    <a href="{{ route('chat') }}" class=" pl-2rounded-lg bg-primary-500 text-white hover:bg-primary-600 transition-colors hover:scale-125">
+                        <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="" class="h-6 w-6">
+                    </a>
                 </div>
             </div>
         </div>
