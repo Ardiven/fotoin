@@ -76,48 +76,52 @@
         <form method="get" action="" class="max-w-6xl mx-auto" x-data="{
             dropdowns: [
                 {
-                    name: 'country',
-                    label: 'Country',
+                    name: 'kota',
+                    label: 'kota',
                     items: [
-                        { value: 'usa', label: 'USA' },
-                        { value: 'china', label: 'China' },
-                        { value: 'japan', label: 'Japan' },
-                        { value: 'germany', label: 'Germany' },
-                        { value: 'uk', label: 'United Kingdom' },
-                        { value: 'india', label: 'India' },
-                        { value: 'france', label: 'France' },
-                        { value: 'italy', label: 'Italy' },
-                        { value: 'canada', label: 'Canada' },
-                        { value: 'brazil', label: 'Brazil' }
+                        { value: 'jakarta', label: 'Jakarta' },
+                        { value: 'surabaya', label: 'Surabaya' },
+                        { value: 'bandung', label: 'Bandung' },
+                        { value: 'medan', label: 'Medan' },
+                        { value: 'semarang', label: 'Semarang' },
+                        { value: 'makassar', label: 'Makassar' },
+                        { value: 'palembang', label: 'Palembang' },
+                        { value: 'depok', label: 'Depok' },
+                        { value: 'bekasi', label: 'Bekasi' },
+                        { value: 'tangerang', label: 'Tangerang' }
                     ]
+
                 },
                 {
-                    name: 'brand',
-                    label: 'Brand',
+                    name: 'category',
+                    label: 'category',
                     items: [
-                        { value: 'moetchandon', label: 'Moët & Chandon' },
-                        { value: 'domperignon', label: 'Dom Pérignon' },
-                        { value: 'veuveclicquot', label: 'Veuve Clicquot' },
-                        { value: 'crystalroederer', label: 'Louis Roederer Cristal' },
-                        { value: 'kruger', label: 'Krug' },
-                        { value: 'bollinger', label: 'Bollinger' },
-                        { value: 'taittinger', label: 'Taittinger' },
-                        { value: 'perrierjouet', label: 'Perrier-Jouët' },
-                        { value: 'lafite', label: 'Château Lafite Rothschild' },
-                        { value: 'latour', label: 'Château Latour' },
-                        { value: 'margaux', label: 'Château Margaux' },
-                        { value: 'petrus', label: 'Château Pétrus' },
-                        { value: 'romanee', label: 'Domaine de la Romanée-Conti' }
+                        { value: 'prewedding', label: 'Prewedding' },
+                        { value: 'wedding', label: 'Wedding' },
+                        { value: 'engagement', label: 'Engagement' },
+                        { value: 'birthday', label: 'Birthday' },
+                        { value: 'maternity', label: 'Maternity' },
+                        { value: 'newborn', label: 'Newborn' },
+                        { value: 'family', label: 'Family' },
+                        { value: 'graduation', label: 'Graduation' },
+                        { value: 'product', label: 'Product' },
+                        { value: 'fashion', label: 'Fashion' },
+                        { value: 'corporate', label: 'Corporate Event' },
+                        { value: 'sports', label: 'Sports' },
+                        { value: 'travel', label: 'Travel' }
                     ]
+
                 },
                 {
-                    name: 'abv',
-                    label: 'ABV',
+                    name: 'harga',
+                    label: 'harga',
                     items: [
-                        { value: '0-20', label: '0-20%' },
-                        { value: '20-40', label: '20-40%' },
-                        { value: '40-99', label: '%40+' }
+                        { value: { min: 0, max: 999999 }, label: 'Kurang dari 1jt' },
+                        { value: { min: 1000000, max: 5000000 }, label: '1jt - 5jt' },
+                        { value: { min: 5000001, max: 10000000 }, label: '5jt - 10jt' },
+                        { value: { min: 10000001, max: null }, label: 'Di atas 10jt' }
                     ]
+
                 }
             ],
             getUrlParams(name) {
