@@ -10,6 +10,7 @@ use App\Models\Package;
 use App\Events\BookingCreated;
 use App\Jobs\SendBookingNotification;
 use Illuminate\Http\Request;
+use App\Events\PaymentProcessed;
 
 class BookingController extends Controller
 {
@@ -129,4 +130,14 @@ class BookingController extends Controller
         return redirect()->route('bookings.index')
             ->with('success', 'Booking deleted successfully');
     }
+    public function processPayment(Booking $booking, Request $request)
+    {
+        $transaction = $this->paymentService->process($booking, $request->all());
+        
+        // Dispatch payment event
+        event(new PaymentProcessed($transaction));
+        
+        return response()->json($transaction);
+    }
+
 }

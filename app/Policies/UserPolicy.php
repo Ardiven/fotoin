@@ -1,65 +1,82 @@
 <?php
+// app/Policies/UserPolicy.php
 
 namespace App\Policies;
 
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
+use Illuminate\Auth\Access\HandlesAuthorization;
 
 class UserPolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(User $user): bool
+    use HandlesAuthorization;
+
+    public function viewAny(User $user)
     {
-        //
+        // Only admins can view user lists
+        return $user->hasRole('admin');
     }
 
-    /**
-     * Determine whether the user can view the model.
-     */
-    public function view(User $user, User $model): bool
+    public function view(User $user, User $model)
     {
-        //
+        // Users can view their own profile
+        // Photographers' profiles are public
+        // Admin can view all
+        if ($user->id === $model->id || $user->hasRole('admin')) {
+            return true;
+        }
+
+        // Public photographer profiles
+        if ($model->hasRole('photographer') && $model->is_profile_public) {
+            return true;
+        }
+
+        return false;
     }
 
-    /**
-     * Determine whether the user can create models.
-     */
-    public function create(User $user): bool
+    public function create(User $user)
     {
-        //
+        // Only admins can create users directly
+        return $user->hasRole('admin');
     }
 
-    /**
-     * Determine whether the user can update the model.
-     */
-    public function update(User $user, User $model): bool
+    public function update(User $user, User $model)
     {
-        //
+        // Users can update their own profile, admins can update any
+        return $user->id === $model->id || $user->hasRole('admin');
     }
 
-    /**
-     * Determine whether the user can delete the model.
-     */
-    public function delete(User $user, User $model): bool
+    public function delete(User $user, User $model)
     {
-        //
+        // Only admin can delete users
+        // Cannot delete if user has active bookings
+        if ($model->hasActiveBookings()) {
+            return false;
+        }
+
+        return $user->hasRole('admin') && $user->id !== $model->id;
     }
 
-    /**
-     * Determine whether the user can restore the model.
-     */
-    public function restore(User $user, User $model): bool
+    public function suspend(User $user, User $model)
     {
-        //
+        // Only admin can suspend users
+        return $user->hasRole('admin') && $user->id !== $model->id;
     }
 
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, User $model): bool
+    public function changeRole(User $user, User $model)
     {
-        //
+        // Only admin can change user roles
+        return $user->hasRole('admin') && $user->id !== $model->id;
+    }
+
+    public function viewBookings(User $user, User $model)
+    {
+        // Users can view their own bookings, admins can view all
+        return $user->id === $model->id || $user->hasRole('admin');
+    }
+
+    public function viewTransactions(User $user, User $model)
+    {
+        // Users can view their own transactions, admins can view all
+        return $user->id === $model->id || $user->hasRole('admin');
     }
 }

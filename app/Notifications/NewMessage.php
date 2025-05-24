@@ -1,54 +1,59 @@
 <?php
+// app/Notifications/NewMessage.php
 
 namespace App\Notifications;
 
+use App\Models\Chat;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class NewMessage extends Notification
+class NewMessage extends Notification implements ShouldQueue
 {
     use Queueable;
 
-    /**
-     * Create a new notification instance.
-     */
-    public function __construct()
+    public function __construct(
+        public Chat $chat
+    ) {}
+
+    public function via($notifiable)
     {
-        //
+        // Only send database notification for real-time updates
+        // Email only if user has email notifications enabled
+        $channels = ['database'];
+        
+        if ($notifiable->email_notifications ?? true) {
+            $channels[] = 'mail';
+        }
+        
+        return $channels;
     }
 
-    /**
-     * Get the notification's delivery channels.
-     *
-     * @return array<int, string>
-     */
-    public function via(object $notifiable): array
+    public function toMail($notifiable)
     {
-        return ['mail'];
-    }
-
-    /**
-     * Get the mail representation of the notification.
-     */
-    public function toMail(object $notifiable): MailMessage
-    {
+        $sender = $this->chat->sender;
+        
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->subject('New Message from ' . $sender->name)
+            ->greeting('Hello ' . $notifiable->name)
+            ->line('You have received a new message from ' . $sender->name . '.')
+            ->line('Message: "' . \Str::limit($this->chat->message, 100) . '"')
+            ->action('Reply Now', url('/chats/' . $this->chat->booking_id))
+            ->line('Stay connected with your photographer/client!');
     }
 
-    /**
-     * Get the array representation of the notification.
-     *
-     * @return array<string, mixed>
-     */
-    public function toArray(object $notifiable): array
+    public function toArray($notifiable)
     {
         return [
-            //
+            'type' => 'new_message',
+            'chat_id' => $this->chat->id,
+            'sender_id' => $this->chat->sender_id,
+            'sender_name' => $this->chat->sender->name,
+            'booking_id' => $this->chat->booking_id,
+            'message_preview' => \Str::limit($this->chat->message, 50),
+            'has_attachment' => $this->chat->attachments->count() > 0,
+            'message' => 'New message from ' . $this->chat->sender->name
         ];
     }
 }

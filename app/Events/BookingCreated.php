@@ -1,7 +1,9 @@
 <?php
+// app/Events/BookingCreated.php
 
 namespace App\Events;
 
+use App\Models\Booking;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PresenceChannel;
@@ -10,27 +12,37 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class BookingCreated
+class BookingCreated implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    /**
-     * Create a new event instance.
-     */
-    public function __construct()
-    {
-        //
-    }
+    public function __construct(
+        public Booking $booking
+    ) {}
 
-    /**
-     * Get the channels the event should broadcast on.
-     *
-     * @return array<int, \Illuminate\Broadcasting\Channel>
-     */
-    public function broadcastOn(): array
+    public function broadcastOn()
     {
         return [
-            new PrivateChannel('channel-name'),
+            new PrivateChannel('user.' . $this->booking->photographer_id),
+            new PrivateChannel('user.' . $this->booking->customer_id)
+        ];
+    }
+
+    public function broadcastAs()
+    {
+        return 'booking.created';
+    }
+
+    public function broadcastWith()
+    {
+        return [
+            'booking_id' => $this->booking->id,
+            'customer_name' => $this->booking->customer->name,
+            'photographer_name' => $this->booking->photographer->name,
+            'package_name' => $this->booking->package->name,
+            'date' => $this->booking->date->format('Y-m-d'),
+            'status' => $this->booking->status,
+            'total_amount' => $this->booking->total_amount
         ];
     }
 }

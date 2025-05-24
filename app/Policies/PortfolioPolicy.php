@@ -1,66 +1,86 @@
 <?php
+// app/Policies/PortfolioPolicy.php
 
 namespace App\Policies;
 
 use App\Models\Portfolio;
 use App\Models\User;
-use Illuminate\Auth\Access\Response;
+use Illuminate\Auth\Access\HandlesAuthorization;
 
 class PortfolioPolicy
 {
-    /**
-     * Determine whether the user can view any models.
-     */
-    public function viewAny(User $user): bool
+    use HandlesAuthorization;
+
+    public function viewAny(?User $user)
     {
-        //
+        // Everyone can view portfolios list
+        return true;
     }
 
-    /**
-     * Determine whether the user can view the model.
-     */
-    public function view(User $user, Portfolio $portfolio): bool
+    public function view(?User $user, Portfolio $portfolio)
     {
-        //
+        // Everyone can view individual portfolios if they're published
+        // Private portfolios only viewable by owner or admins
+        if ($portfolio->is_public) {
+            return true;
+        }
+
+        if (!$user) {
+            return false;
+        }
+
+        return $user->id === $portfolio->photographer_id 
+            || $user->hasRole('admin');
     }
 
-    /**
-     * Determine whether the user can create models.
-     */
-    public function create(User $user): bool
+    public function create(User $user)
     {
-        //
+        // Only photographers can create portfolios
+        return $user->hasRole('photographer');
     }
 
-    /**
-     * Determine whether the user can update the model.
-     */
-    public function update(User $user, Portfolio $portfolio): bool
+    public function update(User $user, Portfolio $portfolio)
     {
-        //
+        // Only portfolio owner or admin can update
+        return $user->id === $portfolio->photographer_id 
+            || $user->hasRole('admin');
     }
 
-    /**
-     * Determine whether the user can delete the model.
-     */
-    public function delete(User $user, Portfolio $portfolio): bool
+    public function delete(User $user, Portfolio $portfolio)
     {
-        //
+        // Only portfolio owner or admin can delete
+        // Cannot delete if there are active bookings
+        if ($portfolio->hasActiveBookings()) {
+            return false;
+        }
+
+        return $user->id === $portfolio->photographer_id 
+            || $user->hasRole('admin');
     }
 
-    /**
-     * Determine whether the user can restore the model.
-     */
-    public function restore(User $user, Portfolio $portfolio): bool
+    public function restore(User $user, Portfolio $portfolio)
     {
-        //
+        return $user->hasRole('admin');
     }
 
-    /**
-     * Determine whether the user can permanently delete the model.
-     */
-    public function forceDelete(User $user, Portfolio $portfolio): bool
+    public function forceDelete(User $user, Portfolio $portfolio)
     {
-        //
+        return $user->hasRole('admin');
+    }
+
+    public function publish(User $user, Portfolio $portfolio)
+    {
+        // Only owner can publish/unpublish their portfolio
+        return $user->id === $portfolio->photographer_id;
+    }
+
+    public function addImage(User $user, Portfolio $portfolio)
+    {
+        return $user->id === $portfolio->photographer_id;
+    }
+
+    public function removeImage(User $user, Portfolio $portfolio)
+    {
+        return $user->id === $portfolio->photographer_id;
     }
 }
