@@ -21,6 +21,11 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        'role' => \App\Http\Middleware\CheckRole::class,
+        'photographer' => \App\Http\Middleware\CheckPhotographer::class,
+        'customer' => \App\Http\Middleware\CheckCustomer::class,
+        'booking.owner' => \App\Http\Middleware\CheckBookingOwner::class,
+        'track.portfolio' => \App\Http\Middleware\TrackPortfolioViews::class,
     ];
 
     /**

@@ -6,23 +6,27 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StorePackageRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
-    public function authorize(): bool
+    public function authorize()
     {
-        return false;
+        return auth()->user()->hasRole('photographer');
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
-    public function rules(): array
+    public function rules()
     {
         return [
-            //
+            'name' => 'required|string|max:255',
+            'description' => 'required|string|max:2000',
+            'price' => 'required|numeric|min:0',
+            'duration_hours' => 'required|integer|min:1|max:24',
+            'max_photos' => 'required|integer|min:1',
+            'max_edited_photos' => 'required|integer|min:1',
+            'includes_raw_files' => 'boolean',
+            'category' => 'required|string|in:wedding,portrait,event,commercial,fashion',
+            'is_active' => 'boolean',
+            'addons' => 'nullable|array',
+            'addons.*.name' => 'required_with:addons|string|max:255',
+            'addons.*.price' => 'required_with:addons|numeric|min:0',
+            'addons.*.description' => 'nullable|string|max:500'
         ];
     }
 }
