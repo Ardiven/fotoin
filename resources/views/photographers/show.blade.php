@@ -115,11 +115,11 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <!-- Paket 1 -->
                     <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
-                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk2.webp"
+                        <img src="https://i.pinimg.com/736x/eb/a2/38/eba238fa04432cf1d06e3d23723adfe8.jpg"
                              alt="Winter Special"
                              class="w-full h-40 object-cover">
                         <div class="p-4">
-                            <h3 class="text-lg font-bold text-gray-800 dark:text-white">Winter Special Package</h3>
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-white">Nature Special Package</h3>
                             <p class="text-secondary-500 font-semibold mt-1">₹129.99</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 3-hour photo session, 50 edited photos, includes travel within city.
@@ -133,11 +133,11 @@
 
                     <!-- Paket 2 -->
                     <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
-                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk2.webp"
+                        <img src="https://i.pinimg.com/736x/a3/9a/74/a39a74e7f866577ea87ddbd8456690fb.jpg"
                              alt="Summer Special"
                              class="w-full h-40 object-cover">
                         <div class="p-4">
-                            <h3 class="text-lg font-bold text-gray-800 dark:text-white">Summer Special Package</h3>
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-white">Wedding Special Package</h3>
                             <p class="text-secondary-500 font-semibold mt-1">₹159.99</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 5-hour photo session, 100 edited photos, includes travel within city and one album.
@@ -151,11 +151,11 @@
 
                     <!-- Paket 3 -->
                     <div class="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
-                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722161/AbhirajK/Abhirajk2.webp"
+                        <img src="https://i.pinimg.com/736x/6a/66/95/6a6695b059f5e0fac81dc91b1ebd8295.jpg"
                              alt="Premium Package"
                              class="w-full h-40 object-cover">
                         <div class="p-4">
-                            <h3 class="text-lg font-bold text-gray-800 dark:text-white">Premium Package</h3>
+                            <h3 class="text-lg font-bold text-gray-800 dark:text-white">Event Package</h3>
                             <p class="text-secondary-500 font-semibold mt-1">₹249.99</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 Full-day photo session, 200 edited photos, travel anywhere, two albums, and video coverage.

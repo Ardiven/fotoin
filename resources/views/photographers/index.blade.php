@@ -100,10 +100,38 @@
         <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <h1 class="text-4xl font-bold text-primary-700 dark:text-white mb-8 animate-bounce-slow">Best Fotografer</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                @for($i = 0; $i < 4; $i++)
                 
                 <!-- Product Cards with Enhanced Design -->
                 <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <!-- Foto Profil Fotografer -->
+                    <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/cb/f9/58/cbf958a59f2950ad7bc211ce50961166.jpg" alt="Alex Johnson" class="w-full h-48 object-cover">
+                  
+                    <div class="p-6">
+                      <!-- Nama dan Role -->
+                      <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Alex Johnson</h2>
+                      <p class="text-gray-600 dark:text-gray-400 text-sm">Wedding & Prewedding Specialist</p>
+                  
+                      <!-- Info Paket -->
+                      <div class="mt-4">
+                        <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
+                        <div class="flex justify-between items-center mt-2">
+                          <p class="text-primary-600 font-bold">Start From Rp.1.000.000</p>
+                          {{-- <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span> --}}
+                        </div>
+                      </div>
+                  
+                      <!-- Tombol Aksi -->
+                      {{-- <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
+                        Book Now
+                      </button>
+                   --}}
+                      
+                    </div>
+                    </a> 
+                  </div>
+
+                  <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
                     <!-- Foto Profil Fotografer -->
                     <a href="{{route('show')}}">
                     <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="Alex Johnson" class="w-full h-48 object-cover">
@@ -131,7 +159,65 @@
                     </div>
                     </a> 
                   </div>
-                @endfor
+
+                  <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <!-- Foto Profil Fotografer -->
+                    <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/e0/0e/82/e00e827fb189e4eafd932cb010cebf66.jpg" alt="Alex Johnson" class="w-full h-48 object-cover">
+                  
+                    <div class="p-6">
+                      <!-- Nama dan Role -->
+                      <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Alex Johnson</h2>
+                      <p class="text-gray-600 dark:text-gray-400 text-sm">Wedding & Prewedding Specialist</p>
+                  
+                      <!-- Info Paket -->
+                      <div class="mt-4">
+                        <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
+                        <div class="flex justify-between items-center mt-2">
+                          <p class="text-primary-600 font-bold">Start From Rp.1.000.000</p>
+                          {{-- <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span> --}}
+                        </div>
+                      </div>
+                  
+                      <!-- Tombol Aksi -->
+                      {{-- <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
+                        Book Now
+                      </button>
+                   --}}
+                      
+                    </div>
+                    </a> 
+                  </div>
+
+                  <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <!-- Foto Profil Fotografer -->
+                    <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/44/66/ee/4466ee0e622425177b4a5745cf21945f.jpg" alt="Alex Johnson" class="w-full h-48 object-cover">
+                  
+                    <div class="p-6">
+                      <!-- Nama dan Role -->
+                      <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Alex Johnson</h2>
+                      <p class="text-gray-600 dark:text-gray-400 text-sm">Wedding & Prewedding Specialist</p>
+                  
+                      <!-- Info Paket -->
+                      <div class="mt-4">
+                        <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
+                        <div class="flex justify-between items-center mt-2">
+                          <p class="text-primary-600 font-bold">Start From Rp.1.000.000</p>
+                          {{-- <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span> --}}
+                        </div>
+                      </div>
+                  
+                      <!-- Tombol Aksi -->
+                      {{-- <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
+                        Book Now
+                      </button>
+                   --}}
+                      
+                    </div>
+                    </a> 
+                  </div>
+                
             </div>
         </div>
     </div>
