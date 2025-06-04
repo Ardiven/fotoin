@@ -33,5 +33,7 @@ RUN cp .env.example .env
 # Generate app key
 RUN php artisan key:generate
 
+RUN php artisan storage:link
+
 # Expose port 80
 EXPOSE 80

@@ -238,12 +238,12 @@
             <div class="mt-10">
                 <h2 class="text-lg font-semibold text-primary-700 dark:text-gray-200 mb-4">Portfolio</h2>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <img src="{{asset('storage/portofolio/1.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 1">
-                    <img src="{{asset('storage/portofolio/2.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 2">
-                    <img src="{{asset('storage/portofolio/3.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 3">
-                    <img src="{{asset('storage/portofolio/4.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 4">
-                    <img src="{{asset('storage/portofolio/5.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 5">
-                    <img src="{{asset('storage/portofolio/7.jpg')}}" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 6">
+                    <img src="https://i.pinimg.com/736x/63/de/3a/63de3a93ad459acf7e6d9ee0d5102aac.jpg" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 1">
+                    <img src="https://i.pinimg.com/736x/9e/1b/56/9e1b567a5445db392298cd5affa4239e.jpg" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 2">
+                    <img src="https://i.pinimg.com/736x/dc/f7/92/dcf792c395e3d71dff01fe287f9a3da7.jpg" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 3">
+                    <img src="https://i.pinimg.com/736x/6a/e9/b9/6ae9b9cd09b3a02d11ac32e621ad64a0.jpg" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 4">
+                    <img src="https://i.pinimg.com/736x/21/0e/41/210e41437997d058e952f86b182f7a4f.jpg" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 5">
+                    <img src="https://i.pinimg.com/736x/61/aa/af/61aaaf28613f56513478cfb00a18e2f8.jpg" class="rounded-lg object-cover h-40 w-full" alt="Portfolio 6">
                 </div>
             </div>
 
