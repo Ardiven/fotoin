@@ -306,7 +306,7 @@
                                     <p class="text-sm">Complete wedding photography package including pre-wedding shots, ceremony coverage, and reception. Includes 100 edited photos.</p>
                                 </div>
                                 <div class="mt-3 flex justify-end">
-                                    <button class="bg-primary-600 hover:bg-primary-700 text-white px-3 py-1 rounded-md text-sm">Accept Offer</button>
+                                    <a href="{{route('payment')}}" class="bg-primary-600 hover:bg-primary-700 text-white px-3 py-1 rounded-md text-sm">Accept Offer</a>
                                 </div>
                             </div>
                         </div>

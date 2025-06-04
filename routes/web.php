@@ -31,3 +31,6 @@ Route::get('/contact', function () {
 Route::get('/chatbot', function () {
     return view('photographers.chatbot');
 })->name('chatbot');
+Route::get('/payment', function () {
+    return view('photographers.payment');
+})->name('payment');
