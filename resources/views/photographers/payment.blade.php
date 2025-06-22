@@ -284,20 +284,16 @@
                     <div class="space-y-3 mb-6">
                         <div class="flex justify-between text-sm">
                             <span class="text-gray-600">Package Price</span>
-                            <span class="text-gray-900">₹299.99</span>
+                            <span class="text-gray-900">Rp. 3.000.000</span>
                         </div>
                         <div class="flex justify-between text-sm">
-                            <span class="text-gray-600">Service Fee</span>
-                            <span class="text-gray-900">₹15.00</span>
-                        </div>
-                        <div class="flex justify-between text-sm">
-                            <span class="text-gray-600">Tax (18%)</span>
-                            <span class="text-gray-900">₹56.70</span>
+                            <span class="text-gray-600">Fee (5%)</span>
+                            <span class="text-gray-900">Rp. 150.000</span>
                         </div>
                         <div class="border-t pt-3">
                             <div class="flex justify-between font-semibold">
                                 <span class="text-gray-900">Total</span>
-                                <span class="text-primary-600">₹371.69</span>
+                                <span class="text-primary-600">Rp. 3.150.000</span>
                             </div>
                         </div>
                     </div>
@@ -318,7 +314,7 @@
                         <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                         </svg>
-                        <span>Pay ₹371.69</span>
+                        <span>Pay Rp. 3.150.000</span>
                     </button>
 
                     <!-- Money Back Guarantee -->

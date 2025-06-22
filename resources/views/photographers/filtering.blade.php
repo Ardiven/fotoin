@@ -56,19 +56,8 @@
     <title>FotoIn Chat</title>
     <style>
         body, html {
-            height: 100%;
             margin: 0;
-            overflow: hidden;
             background-color: #f0f5ff;
-        }
-        .chat-container {
-            height: calc(100vh - 4rem);
-        }
-        .message-container {
-            height: calc(100% - 4rem);
-        }
-        .messages-area {
-            height: calc(100% - 4rem);
         }
         /* Custom scrollbar */
         ::-webkit-scrollbar {
@@ -132,6 +121,7 @@
             </div>
         </div>
     </nav>
+    
     <div class="min-h-screen p-4 md:p-8">
         <form method="get" action="" class="max-w-6xl mx-auto" x-data="{
             dropdowns: [
@@ -303,40 +293,170 @@
                 </div>
             </div>
         </form>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-hidden">
-                @for($i = 0; $i < 3; $i++)
-                
-                <!-- Product Cards with Enhanced Design -->
-                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
-                    <!-- Foto Profil Fotografer -->
-                    <a href="{{route('show')}}">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Photographer 1 - Alex Johnson -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
                     <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="Alex Johnson" class="w-full h-48 object-cover">
-                  
                     <div class="p-6">
-                      <!-- Nama dan Role -->
-                      <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Alex Johnson</h2>
-                      <p class="text-gray-600 dark:text-gray-400 text-sm">Wedding & Prewedding Specialist</p>
-                  
-                      <!-- Info Paket -->
-                      <div class="mt-4">
-                        <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
-                        <div class="flex justify-between items-center mt-2">
-                          <p class="text-primary-600 font-bold">Start From Rp.1.000.000</p>
-                          {{-- <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Limited</span> --}}
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Alex Johnson</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Wedding & Prewedding Specialist</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.1.000.000</p>
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Popular</span>
+                            </div>
                         </div>
-                      </div>
-                  
-                      <!-- Tombol Aksi -->
-                      {{-- <button class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors">
-                        Book Now
-                      </button>
-                   --}}
-                      
                     </div>
-                    </a> 
-                  </div>
-                @endfor
+                </a> 
             </div>
+
+            <!-- Photographer 2 - Sarah Chen -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/e3/25/22/e325227e9f915f136963679d6b5f14e9.jpg" alt="Sarah Chen" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Sarah Chen</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Portrait & Fashion Photographer</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Creative Portrait Session</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.750.000</p>
+                                <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <!-- Photographer 3 - Michael Rodriguez -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=300&fit=crop&crop=face" alt="Michael Rodriguez" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Michael Rodriguez</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Event & Corporate Photographer</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Corporate Event Package</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.2.500.000</p>
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <!-- Photographer 4 - Emma Thompson -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=300&fit=crop&crop=face" alt="Emma Thompson" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Emma Thompson</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Maternity & Family Specialist</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Family Memories Package</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.850.000</p>
+                                <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs">Trending</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <!-- Photographer 5 - David Kim -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/ff/5d/fb/ff5dfbbf46eac50fdbd2986de7f6035c.jpg" alt="David Kim" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">David Kim</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Street & Documentary Photographer</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Urban Lifestyle Session</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.650.000</p>
+                                <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">New</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <!-- Photographer 6 - Lisa Anderson -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/3e/0e/35/3e0e35c6ceffd53e3cca3bd88fc2012a.jpg" alt="Lisa Anderson" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Lisa Anderson</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Product & Commercial Photographer</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Product Photography Pro</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.1.200.000</p>
+                                <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs">Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <!-- Photographer 7 - James Wilson -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/8e/86/fe/8e86fe393abef3b78727a653413a150d.jpg" alt="James Wilson" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">James Wilson</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Sports & Action Photographer</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Sports Action Package</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.1.800.000</p>
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs">Sports</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <!-- Photographer 8 - Maya Patel -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/6d/88/67/6d8867cfa3490727dbd39bb9a01651d6.jpg" alt="Maya Patel" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Maya Patel</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Travel & Landscape Photographer</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Adventure Travel Session</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.900.000</p>
+                                <span class="bg-teal-100 text-teal-800 px-2 py-1 rounded-full text-xs">Adventure</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+
+            <!-- Photographer 9 - Robert Lee -->
+            <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                <a href="{{route('show')}}">
+                    <img src="https://i.pinimg.com/736x/90/c7/05/90c705dad5fd1e10e14856494533c47e.jpg" alt="Robert Lee" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Robert Lee</h2>
+                        <p class="text-gray-600 dark:text-gray-400 text-sm">Architecture & Real Estate</p>
+                        <div class="mt-4">
+                            <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Property Showcase Package</h3>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-primary-600 font-bold">Start From Rp.1.500.000</p>
+                                <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs">Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+        </div>
     </div>
 </body>
 </html>

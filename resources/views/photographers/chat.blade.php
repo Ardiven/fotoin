@@ -147,12 +147,12 @@
             <ul class="divide-y">
                 <li class="p-4 bg-primary-50 border-l-4 border-primary-500 cursor-pointer flex items-center space-x-3">
                     <div class="w-10 h-10 rounded-full bg-gray-300 flex-shrink-0 relative">
-                        <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="User" class="w-full h-full rounded-full object-cover">
                         <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
                     </div>
                     <div class="flex-1">
                         <div class="flex justify-between items-center">
-                            <span class="font-medium text-primary-700">Jonathan</span>
+                            <span class="font-medium text-primary-700">Alex Johnson</span>
                             <span class="text-xs text-gray-500">3m ago</span>
                         </div>
                         <p class="text-sm text-gray-600 truncate">Lagi belajar buat aplikasi chat...</p>
@@ -194,7 +194,7 @@
                         <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="User" class="w-full h-full rounded-full object-cover">
                     </div>
                     <div>
-                        <div class="font-medium">Jonathan</div>
+                        <div class="font-medium">Alex Johnson</div>
                         <div class="text-xs text-gray-500">Online</div>
                     </div>
                 </div>
@@ -217,7 +217,7 @@
                 <!-- Pesan masuk -->
                 <div class="flex items-start space-x-2 max-w-xs">
                     <div class="w-8 h-8 rounded-full bg-gray-300 flex-shrink-0">
-                        <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="User" class="w-full h-full rounded-full object-cover">
                     </div>
                     <div>
                         <div class="bg-white p-3 rounded-lg shadow-sm">
@@ -240,7 +240,7 @@
                 <!-- Tambahkan beberapa pesan untuk contoh -->
                 <div class="flex items-start space-x-2 max-w-xs">
                     <div class="w-8 h-8 rounded-full bg-gray-300 flex-shrink-0">
-                        <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="User" class="w-full h-full rounded-full object-cover">
                     </div>
                     <div>
                         <div class="bg-white p-3 rounded-lg shadow-sm">
@@ -261,7 +261,7 @@
                 
                 <div class="flex items-start space-x-2 max-w-xs">
                     <div class="w-8 h-8 rounded-full bg-gray-300 flex-shrink-0">
-                        <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="User" class="w-full h-full rounded-full object-cover">
                     </div>
                     <div>
                         <div class="bg-white p-3 rounded-lg shadow-sm">
@@ -274,7 +274,7 @@
                 <!-- Custom Package Message -->
                 <div class="flex items-start space-x-2">
                     <div class="w-8 h-8 rounded-full bg-gray-300 flex-shrink-0">
-                        <img src="https://i.pinimg.com/736x/e7/29/b3/e729b3d73b621c92997f3bb3e1961c6a.jpg" alt="User" class="w-full h-full rounded-full object-cover">
+                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="User" class="w-full h-full rounded-full object-cover">
                     </div>
                     <div>
                         <div class="bg-white p-4 rounded-lg shadow-sm max-w-md">

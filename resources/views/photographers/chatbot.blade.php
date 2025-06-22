@@ -243,105 +243,57 @@
             
             <div class="grid md:grid-cols-3 gap-6">
                 <!-- Photographer Card 1 -->
-                <div class="bg-white p-5 rounded-2xl shadow-md card-hover">
-                    <div class="relative mb-4">
-                        <img src="https://i.pinimg.com/736x/8f/04/20/8f042044eab64de23ad11d8eac03525e.jpg" alt="Andi Wijaya Portfolio" class="rounded-xl w-full h-52 object-cover">
-                        <span class="absolute top-3 left-3 bg-blue-600 text-white text-xs px-2 py-1 rounded-lg">Top Rated</span>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="text-lg font-semibold">Andi Wijaya</h4>
-                            <p class="text-gray-600 text-sm">Spesialis prewedding & candid</p>
+                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <a href="{{route('show')}}">
+                        <img src="https://i.pinimg.com/736x/8f/04/20/8f042044eab64de23ad11d8eac03525e.jpg" alt="Andi Wijaya" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Andi Wijaya</h2>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Spesialis prewedding & candid</p>
+                            <div class="mt-4">
+                                <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Natural Prewedding Expert</h3>
+                                <div class="flex justify-between items-center mt-2">
+                                    <p class="text-primary-600 font-bold">Start From Rp.2.500.000</p>
+                                    <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs">Top Rated</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex items-center bg-yellow-100 px-2 py-1 rounded-lg">
-                            <i class="fas fa-star text-yellow-500 mr-1 text-sm"></i>
-                            <span class="text-sm font-medium">4.9</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center mt-3 mb-4">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-1 text-sm"></i>
-                        <span class="text-gray-600 text-sm">Bali</span>
-                        <span class="mx-2 text-gray-300">|</span>
-                        <i class="fas fa-camera text-gray-500 mr-1 text-sm"></i>
-                        <span class="text-gray-600 text-sm">5+ tahun pengalaman</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Prewedding</span>
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Candid</span>
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Natural</span>
-                    </div>
-                    <button class="w-full gradient-button text-white px-4 py-2 rounded-xl flex items-center justify-center gap-1">
-                        <i class="far fa-eye"></i>
-                        <span>Lihat Profil</span>
-                    </button>
+                    </a>
                 </div>
                 
                 <!-- Photographer Card 2 -->
-                <div class="bg-white p-5 rounded-2xl shadow-md card-hover">
-                    <div class="relative mb-4">
-                        <img src="https://i.pinimg.com/736x/45/08/c5/4508c54f1120727c661647b6ee4903cb.jpg" alt="Maya Sari Portfolio" class="rounded-xl w-full h-52 object-cover">
-                        <span class="absolute top-3 left-3 bg-green-600 text-white text-xs px-2 py-1 rounded-lg">Tersedia</span>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="text-lg font-semibold">Maya Sari</h4>
-                            <p class="text-gray-600 text-sm">Prewedding & wedding dokumentasi</p>
+                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <a href="{{route('show')}}">
+                        <img src="https://i.pinimg.com/736x/45/08/c5/4508c54f1120727c661647b6ee4903cb.jpg" alt="Maya Sari" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Maya Sari</h2>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Prewedding & wedding dokumentasi</p>
+                            <div class="mt-4">
+                                <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Wedding Documentation Pro</h3>
+                                <div class="flex justify-between items-center mt-2">
+                                    <p class="text-primary-600 font-bold">Start From Rp.3.200.000</p>
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Available</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex items-center bg-yellow-100 px-2 py-1 rounded-lg">
-                            <i class="fas fa-star text-yellow-500 mr-1 text-sm"></i>
-                            <span class="text-sm font-medium">4.8</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center mt-3 mb-4">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-1 text-sm"></i>
-                        <span class="text-gray-600 text-sm">Bali</span>
-                        <span class="mx-2 text-gray-300">|</span>
-                        <i class="fas fa-camera text-gray-500 mr-1 text-sm"></i>
-                        <span class="text-gray-600 text-sm">7+ tahun pengalaman</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Wedding</span>
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Prewedding</span>
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Artistic</span>
-                    </div>
-                    <button class="w-full gradient-button text-white px-4 py-2 rounded-xl flex items-center justify-center gap-1">
-                        <i class="far fa-eye"></i>
-                        <span>Lihat Profil</span>
-                    </button>
+                    </a>
                 </div>
                 
                 <!-- Photographer Card 3 -->
-                <div class="bg-white p-5 rounded-2xl shadow-md card-hover">
-                    <div class="relative mb-4">
-                        <img src="https://i.pinimg.com/736x/ca/67/2e/ca672ef62b9957fa05f3f197960f326a.jpg" alt="Budi Santoso Portfolio" class="rounded-xl w-full h-52 object-cover">
-                        <span class="absolute top-3 left-3 bg-purple-600 text-white text-xs px-2 py-1 rounded-lg">Premium</span>
-                    </div>
-                    <div class="flex justify-between items-start">
-                        <div>
-                            <h4 class="text-lg font-semibold">Budi Santoso</h4>
-                            <p class="text-gray-600 text-sm">Landscape & cinematic prewedding</p>
+                <div class="bg-white dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden transform transition-all hover:-translate-y-1 hover:shadow-2xl">
+                    <a href="{{route('show')}}">
+                        <img src="https://res.cloudinary.com/djv4xa6wu/image/upload/v1735722163/AbhirajK/Abhirajk%20mykare.webp" alt="Alex Johnson" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-semibold text-gray-800 dark:text-white">Alex Johnson</h2>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Wedding & Prewedding Specialist</p>
+                            <div class="mt-4">
+                                <h3 class="text-md font-medium text-gray-700 dark:text-gray-200">Winter Special Package</h3>
+                                <div class="flex justify-between items-center mt-2">
+                                    <p class="text-primary-600 font-bold">Start From Rp.1.000.000</p>
+                                    <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs">Popular</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex items-center bg-yellow-100 px-2 py-1 rounded-lg">
-                            <i class="fas fa-star text-yellow-500 mr-1 text-sm"></i>
-                            <span class="text-sm font-medium">5.0</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center mt-3 mb-4">
-                        <i class="fas fa-map-marker-alt text-red-500 mr-1 text-sm"></i>
-                        <span class="text-gray-600 text-sm">Bali, Jakarta</span>
-                        <span class="mx-2 text-gray-300">|</span>
-                        <i class="fas fa-camera text-gray-500 mr-1 text-sm"></i>
-                        <span class="text-gray-600 text-sm">10+ tahun pengalaman</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Cinematic</span>
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Dramatic</span>
-                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded-lg">Landscape</span>
-                    </div>
-                    <button class="w-full gradient-button text-white px-4 py-2 rounded-xl flex items-center justify-center gap-1">
-                        <i class="far fa-eye"></i>
-                        <span>Lihat Profil</span>
-                    </button>
+                    </a> 
                 </div>
             </div>
         </div>

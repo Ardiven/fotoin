@@ -120,7 +120,7 @@
                              class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-gray-800 dark:text-white">Nature Special Package</h3>
-                            <p class="text-secondary-500 font-semibold mt-1">₹129.99</p>
+                            <p class="text-secondary-500 font-semibold mt-1">Rp. 1.000.000</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 3-hour photo session, 50 edited photos, includes travel within city.
                             </p>
@@ -138,7 +138,7 @@
                              class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-gray-800 dark:text-white">Wedding Special Package</h3>
-                            <p class="text-secondary-500 font-semibold mt-1">₹159.99</p>
+                            <p class="text-secondary-500 font-semibold mt-1">Rp. 3.000.000</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 5-hour photo session, 100 edited photos, includes travel within city and one album.
                             </p>
@@ -156,7 +156,7 @@
                              class="w-full h-40 object-cover">
                         <div class="p-4">
                             <h3 class="text-lg font-bold text-gray-800 dark:text-white">Event Package</h3>
-                            <p class="text-secondary-500 font-semibold mt-1">₹249.99</p>
+                            <p class="text-secondary-500 font-semibold mt-1">Rp. 4.000.000</p>
                             <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
                                 Full-day photo session, 200 edited photos, travel anywhere, two albums, and video coverage.
                             </p>
